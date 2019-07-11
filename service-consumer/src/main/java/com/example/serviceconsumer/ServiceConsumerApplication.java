@@ -8,6 +8,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
 /* 熔断注解 */
@@ -16,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 @EnableEurekaClient
 @SpringBootApplication
+@ComponentScan(value = "com.example")
 public class ServiceConsumerApplication {
 
     public static void main(String[] args) {

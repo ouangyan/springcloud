@@ -9,6 +9,6 @@ public class Rabbitmq_consumerConfig {
 
     @Bean
     public Queue config(){
-        return new Queue("hello");
+        return new Queue("delayed.goods.order");
     }
 }
