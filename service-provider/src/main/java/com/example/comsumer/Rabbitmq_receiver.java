@@ -20,8 +20,8 @@ public class Rabbitmq_receiver {
 
     @RabbitHandler
     public void process(String msg){
-//        log.info("接收时间:" + sdf.format(new Date()));
-//        log.info("消息内容:"+msg);
+        log.info("接收时间:" + sdf.format(new Date()));
+        log.info("消息内容:"+msg);
         if(receiverHandler != null){
             this.receiverHandler.handle(msg);
         }

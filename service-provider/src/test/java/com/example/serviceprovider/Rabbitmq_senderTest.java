@@ -15,8 +15,8 @@ public class Rabbitmq_senderTest {
 
     @Test
     public void senderTest() throws InterruptedException {
-        for(int j=0;j<3;j++){
-            this.rabbitmq_sender.send("你好 hyy1!这是第"+j+"条消息！");
+        for(int j=1;j<=3;j++){
+            this.rabbitmq_sender.send("你好 hyy1!这是第"+1+"条消息！");
         }
     }
 }

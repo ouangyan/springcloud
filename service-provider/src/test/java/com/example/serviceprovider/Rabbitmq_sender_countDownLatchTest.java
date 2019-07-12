@@ -23,7 +23,7 @@ public class Rabbitmq_sender_countDownLatchTest {
 
     @Test
     public void senderTest() throws InterruptedException, TimeoutException {
-        int totalCount = 10000;
+        int totalCount = 10;
         CountDownLatch countDownLatch = new CountDownLatch(totalCount);
         ReceiverHandler handler = new ReceiverHandler() {
             @Override

@@ -26,7 +26,7 @@ public class Rabbitmq_sender {
     private AmqpTemplate rabbitTemplate;
 
     public void send(String msg){
-        //log.info("Hi! hyy1! 发送消息时间为："+sdf.format(new Date()));
+        log.info("Hi! hyy1! 发送消息时间为："+sdf.format(new Date()));
 
         rabbitTemplate.convertAndSend("delayedec", "delayed.goods.order", msg, new MessagePostProcessor() {
             @Override
@@ -39,7 +39,7 @@ public class Rabbitmq_sender {
                 else if(randomNum==2)
                     delayTime=8000;
                 message.getMessageProperties().setHeader("x-delay", delayTime);
-                //log.info("发送的消息延迟时间为："+delayTime+"毫秒!");
+                log.info("发送的消息延迟时间为："+delayTime+"毫秒!");
                 return message;
             }
         });
