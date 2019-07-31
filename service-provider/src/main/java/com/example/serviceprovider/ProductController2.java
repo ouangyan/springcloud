@@ -14,7 +14,7 @@ public class ProductController2 {
    @RequestMapping("/products")
     public Product detail(/*@PathVariable String itemCode*/@RequestParam(value = "itemCode", defaultValue = "xxx") String itemCode) {
        try {
-           Thread.sleep(11000);
+           Thread.sleep(9000);
        } catch (InterruptedException e) {
            e.printStackTrace();
        }

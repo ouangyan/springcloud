@@ -39,7 +39,6 @@ public class Rabbitmq_sender {
                 else if(randomNum==2)
                     delayTime=8000;
                 message.getMessageProperties().setHeader("x-delay", delayTime);
-                log.info("发送的消息延迟时间为："+delayTime+"毫秒!");
                 return message;
             }
         });

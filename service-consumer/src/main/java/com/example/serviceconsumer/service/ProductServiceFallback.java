@@ -10,6 +10,6 @@ import java.util.List;
 public class ProductServiceFallback implements ProductService2 {
     @Override
     public Product loadByItemCode(@PathVariable("itemCode") String itemCode) {
-        return new Product("error", "Fallback", 0);
+        return new Product("error", "网络繁忙请稍后...", 0);
     }
 }

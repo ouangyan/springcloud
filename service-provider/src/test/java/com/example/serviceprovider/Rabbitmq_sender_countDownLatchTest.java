@@ -36,7 +36,7 @@ public class Rabbitmq_sender_countDownLatchTest {
             this.rabbitmq_sender.send("你好 hyy1!这是第"+j+"条消息！");
         }
 
-        if(!countDownLatch.await(60, TimeUnit.SECONDS)){
+        if(!countDownLatch.await(20, TimeUnit.SECONDS)){
             throw new TimeoutException();
         }
     }
